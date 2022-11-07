@@ -209,3 +209,6 @@ app.post("/login", function(req, res){
     app.listen(process.env.PORT || 3000, function() {
       console.log("Sarted the server at port 3000");
     });
+    // SECRET=Thisisourlittlesecret
+    // CLIENT_ID=122989638194-1gan96djicp3dt0g15j6h8dm1761qapm.apps.googleusercontent.com
+    // CLIENT_SECRET=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
