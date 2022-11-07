@@ -35,24 +35,7 @@ app.use(passport.session());
 
 
 
-const database = module.exports = () => {
-
-const connectionParams = {
-
-userNewUrlParser: true,
-
-useUnifiedTopology: true,   }
-
-  try {
-
-  mongoose.connect("mongodb+srv://hlruffo:Pranav@9521@cluster0.nlvxdfh.mongodb.net/userDB?retryWrites=true&w=majority");
-
-  } catch (error) {
-
-    console.log(error)
-
-  console.log("Failed")   } }
-database()
+mongoose.connect("mongodb+srv://Pranav:pranav@cluster0.a7ig9h9.mongodb.net/userDB");
 
 const userSchema = new mongoose.Schema({
   email: String,
@@ -226,6 +209,3 @@ app.post("/login", function(req, res){
     app.listen(process.env.PORT || 3000, function() {
       console.log("Sarted the server at port 3000");
     });
-    // SECRET=Thisisourlittlesecret
-    // CLIENT_ID=122989638194-1gan96djicp3dt0g15j6h8dm1761qapm.apps.googleusercontent.com
-    // CLIENT_SECRET=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
