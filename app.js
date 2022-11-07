@@ -35,7 +35,24 @@ app.use(passport.session());
 
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/userDB");
+const database = module.exports = () => {
+
+const connectionParams = {
+
+userNewUrlParser: true,
+
+useUnifiedTopology: true,   }
+
+  try {
+
+  mongoose.connect("mongodb+srv://hlruffo:Pranav@9521@cluster0.nlvxdfh.mongodb.net/userDB?retryWrites=true&w=majority");
+
+  } catch (error) {
+
+    console.log(error)
+
+  console.log("Failed")   } }
+database()
 
 const userSchema = new mongoose.Schema({
   email: String,
